@@ -2,8 +2,8 @@ import "./globals.css";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export const metadata = {
-    title: "You-Tube-Igo",
-    description: "AI-Powered Video/Audio Creator",
+    title: "YouTube-Aigo",
+    description: "AI-Powered Audio Creation Studio",
 };
 
 export default function RootLayout({ children }) {

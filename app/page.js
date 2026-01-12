@@ -24,7 +24,7 @@ export default function Home() {
                         <Image src="/logo.png" alt="Logo" width={40} height={40} className="object-contain" priority />
                     </div>
                     <h1 className="text-xl font-bold tracking-wider bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                        YOU-TUBE-IGO
+                        YOUTUBE-AIGO
                     </h1>
                 </div>
                 <div className="flex items-center gap-4">
