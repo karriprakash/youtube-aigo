@@ -4,6 +4,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 export const metadata = {
     title: "YouTube-Aigo",
     description: "AI-Powered Audio Creation Studio",
+    icons: {
+        icon: '/icon.png',
+    },
 };
 
 export default function RootLayout({ children }) {
