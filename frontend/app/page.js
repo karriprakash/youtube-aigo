@@ -6,6 +6,8 @@ import { AdSpace } from '@/components/AdSpace';
 import { InfoModal } from '@/components/InfoModal';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import Link from 'next/link';
+import { Wizard } from '@/components/Wizard';
+
 import Image from 'next/image';
 
 export default function Home() {
@@ -45,32 +47,25 @@ export default function Home() {
                 <AdSpace className="w-full max-w-4xl h-24 mb-12" />
 
                 {/* Hero */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16 max-w-2xl"
-                >
-                    <h2 className="text-5xl md:text-6xl font-extrabold mb-8 leading-tight">
-                        Create Audio <br />
-                        <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent inline-block pb-1">Like Never Before</span>
-                    </h2>
-                    <p className={`text-xl mb-12 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
-                        The ultimate AI-powered platform for converting and enhancing your YouTube content.
-                        Experience our 5-stage studio process customized for creators.
-                    </p>
-
-                    <div className="flex flex-col gap-4 items-center">
-                        <Link href="/upload" className="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-600 hover:scale-105">
-                            <span>Start Creating Now</span>
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            <div className="absolute -inset-3 rounded-full bg-gradient-to-r from-cyan-400 to-purple-600 opacity-20 group-hover:opacity-40 blur-lg transition-opacity duration-200" />
-                        </Link>
-
-                        <p className="text-xs text-gray-500 mt-4 max-w-sm">
-                            *By clicking Start, you agree to our terms. Content is auto-deleted after 15 minutes.
+                {/* Hero & Wizard */}
+                <div className="flex flex-col items-center w-full mb-20">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="text-center mb-12 max-w-3xl"
+                    >
+                        <h2 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                            Create Audio <br />
+                            <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent inline-block pb-1">Like Never Before</span>
+                        </h2>
+                        <p className={`text-xl ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+                            The ultimate AI-powered platform. Upload your content below to start the agentic workflow.
                         </p>
-                    </div>
-                </motion.div>
+                    </motion.div>
+
+                    <Wizard />
+                </div>
+
 
                 {/* Feature Grid / More Content for Intro */}
                 <div className="grid md:grid-cols-3 gap-8 w-full max-w-6xl mt-8">
