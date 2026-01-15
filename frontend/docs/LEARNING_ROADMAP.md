@@ -4,6 +4,18 @@ Since you are a **Java developer** with **Python (Spark/Pandas)** experience, th
 
 ## 1. The Big Picture
 Your project is a **Distributed Multi-Service Architecture**:
+
+```mermaid
+graph TD
+    User([User]) -->|Inputs Media| FE[Next.js Frontend]
+    FE -->|Triggers Workflow| BE[FastAPI Backend]
+    BE -->|Queues Job| Redis[(Redux/Redis Queue)]
+    BE -->|Analysis| PA[Perception Agent - Gemini 3]
+    PA -->|Metadata| CA[Creative Agent - SEO]
+    CA -->|Approval Required| FE
+    FE -->|Execute Push| AA[Action Agent - YouTube]
+```
+
 *   **Frontend (Next.js/React)**: The "Display Layer". Runs on Port 3000.
 *   **Backend (FastAPI/Python)**: The "Intelligence Layer". This is where the AI Agents live. Runs on Port 8000.
 *   **Agents (Gemini 3 Flash)**: Specialized "Logic Workers".
