@@ -62,7 +62,18 @@ Your project is a **Distributed Multi-Service Architecture**:
 
 ### Phase 3: React & Next.js (3-4 Days)
 *   **Focus**: Building UI components using **Lucide icons** and **Framer Motion**.
-*   **Task**: Modify `Wizard.jsx` to add a new "Step" for Data Analysis (using your Spark mindset!).
+*   **Task**: Modify `Wizard.jsx` to add a new "Step" for Data Analysis.
+
+---
+
+## 6. Scalability & Transitions for Data Engineers
+
+| Concept | Java / Spark | YouTube-Aigo 2.0 |
+| :--- | :--- | :--- |
+| **Job Scheduling** | Spark Session / Yarn | **Redis + BackgroundTasks** |
+| **State Persistence** | Checkpoints / HDFS | **PostgreSQL + Redis Cache** |
+| **Data Partitioning** | Shuffling / Bucketing | **Agent Parallelism** (Running multiple agent calls) |
+| **Resource Management** | Executor Cores / Memory | **Docker Container Limits** |
 
 ---
 
